@@ -47,8 +47,6 @@ export default function GameBoard({darkMode}) {
     if (flippedCells.length === 0) setWon(true)
   }
 
-  console.log("re-rendered!")
-
   useEffect(() => {
     randomizeLitCellsAtStart(cells)
     setFlipping(false)
