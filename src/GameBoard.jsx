@@ -63,12 +63,12 @@ export default function GameBoard({darkMode}) {
   return (
     <div>
     <h1 className={darkMode ? 'text-center text-6xl font-bold mt-5 pb-4 text-white font-mono bg-gradient-to-r from-transparent via-indigo-400 to-transparent pt-4 italic' : "text-center text-6xl font-bold mt-5 pb-4 text-slate-800 font-mono bg-gradient-to-r from-transparent via-indigo-400 to-transparent pt-4 italic" }>Lights Out</h1>
-    {!won && <div className='w-[80vh] h-[80vh] m-auto grid grid-cols-5 grid-rows-5 text-center border-4 border-slate-800 rounded-md'>
+    {!won && <div className='w-[50vh] h-[50vh] md:w-[80vh] md:h-[80vh] m-auto grid grid-cols-5 grid-rows-5 text-center border-4 border-slate-800 rounded-md'>
         {!flipping && cells.map((cell, index) => (
             <Cell cell={cell === true ? true : false} index={index} key={index} flipSelfAndSurroundingCells={flipSelfAndSurroundingCells} setFlipping={setFlipping} darkMode={darkMode}/>
         ))}
     </div>}
-    {won && <h1>YOU WON</h1>}
+     {won && <h1 className='text-8xl animate-bounce mt-12 text-center text-pink-400 font-bold underline'>YOU WON</h1>}
     </div>
   )
 }
