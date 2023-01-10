@@ -22,7 +22,7 @@ export default function GameBoard({darkMode}) {
 
   function generateFiveRandomNumbers() {
     let randomNumbers = []
-    for(let i = 0; i < 2; i++) {
+    for(let i = 0; i < 5; i++) {
         let number = Math.floor(Math.random() * 24 + 1)
         randomNumbers.push(number)
     }
