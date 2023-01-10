@@ -11,7 +11,7 @@ export default function GameBoard({darkMode}) {
 
   function randomizeLitCellsAtStart(cellsArray) {
     const randomIndices = generateFiveRandomNumbers()
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < randomIndices.length; i++) {
         cellsArray[randomIndices[i]] = true
     }
     for (let i = 0; i < cells.length; i++) {
@@ -22,7 +22,7 @@ export default function GameBoard({darkMode}) {
 
   function generateFiveRandomNumbers() {
     let randomNumbers = []
-    for(let i = 0; i < 5; i++) {
+    for(let i = 0; i < 6; i++) {
         let number = Math.floor(Math.random() * 24 + 1)
         randomNumbers.push(number)
     }
